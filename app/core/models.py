@@ -73,7 +73,7 @@ class Recipe(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE
     )
-    ingrdient = models.ManyToManyField("Ingredient")
+    ingredients = models.ManyToManyField("Ingredient")
     tags = models.ManyToManyField("Tag")
 
     def __str__(self):
